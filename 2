@@ -2,3 +2,13 @@
 echo "Hello, world!"
 read -p "What is your name? " name
 echo "Hello, ${name}!"
+echo "##########"
+echo "choose option: "
+echo -p "1. load \n 2. check users online \n 3. uptime" status
+if [[ $status -eq 1 ]]; then
+loadavg
+elif [[ $status -eq 2 ]]; then
+who
+elif [[ $status -eq 3 ]]; then
+uptime
+fi
